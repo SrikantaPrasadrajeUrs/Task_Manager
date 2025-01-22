@@ -1,0 +1,28 @@
+# Node.js (Backend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.DS_Store
+
+# Flutter (Frontend)
+build/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+.macos/
+.windows/
+*.iml
+
+# General
+*.log
+*.swp
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+*.bak
+*.tmp
+
