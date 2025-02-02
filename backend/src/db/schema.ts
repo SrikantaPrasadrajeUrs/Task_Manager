@@ -9,6 +9,12 @@ export const users = pgTable("users",{
     updatedAt: timestamp("updated_at").defaultNow()
 })
 
-export type User  = typeof users.$inferInsert
+export type User  = typeof users.$inferInsert;
 
-export type NewUser = typeof users.$inferInsert
+export type NewUser = typeof users.$inferInsert;
+
+export const refreshTokenTables = pgTable("refresh_tokens",{
+    id:uuid("id").primaryKey().defaultRandom(),
+    userId:uuid("user_id").notNull().references(()=>users.id,{'onDelete':"cascade"}),
+    token:text("token").notNull(),
+});
