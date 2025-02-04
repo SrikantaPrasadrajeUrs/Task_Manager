@@ -5,7 +5,6 @@ import { eq } from "drizzle-orm";
 import { users , NewUser, User, refreshTokenTables } from "../db/schema";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
 
 const signUpUser = async(req:Request<{},{},SignUpBody>,res:Response)=>{
       try {

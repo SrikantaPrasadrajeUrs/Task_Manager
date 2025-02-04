@@ -1,3 +1,6 @@
+import { UUID } from "crypto";
+import { Request } from "express";
+
 interface SignUpBody{
     name:string;
     email:string;
@@ -9,4 +12,9 @@ interface LoginBody{
     password:string;
 }
 
-export {SignUpBody,LoginBody};
+interface AuthRequest extends Request{
+    user?:UUID;
+    token?:string;
+}
+
+export {SignUpBody, LoginBody, AuthRequest};
